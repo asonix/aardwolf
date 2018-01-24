@@ -11,36 +11,36 @@
   </head>
   <body>
 
-	{{#> main_nav_top}}
-	  Main nav top
-	{{/main_nav_top}}
-  
-  <section class="section">  
-	<!-- Does this need to be in a <div class="container> ?? -->
-	<!-- For now I would say no, because making it a container brings it to left-center -->
+    {{#> main_nav_top}}
+      Main nav top
+    {{/main_nav_top}}
 
-	{{#> aside_shortcuts}}
-	   Main aside
-	{{/aside_shortcuts}}
-	
-	</section>	
-  <section class="section">
-    <div class="container">
+    <section class="section">
+      <!-- Does this need to be in a <div class="container"></div> ?? -->
+      <!-- For now I would say no, because making it a container brings it to left-center -->
 
-	{{#>new_post}}
-	   New post
-	{{/new_post}}
-	
-	{{#> main_feed}}
-	   Main feed
-	{{/main_feed}}
-	
-    </div><!-- End page body container-->
-  </section><!-- End page body -->
+      {{#> aside_shortcuts}}
+        Main aside
+      {{/aside_shortcuts}}
+
+    </section>
+    <section class="section">
+      <div class="container">
+
+        {{#>new_post}}
+          New post
+        {{/new_post}}
+
+        {{#> main_feed}}
+          Main feed
+        {{/main_feed}}
+
+      </div><!-- End page body container-->
+    </section><!-- End page body -->
   </body>
 
-  {{#> main_footer}}
-     Main footer
-  {{/main_footer}}
-  
+  {{#> default_footer}}
+    Main footer
+  {{/default_footer}}
+
 </html>

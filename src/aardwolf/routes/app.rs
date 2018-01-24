@@ -16,3 +16,11 @@ fn home(user: User, _db: DbConn) -> Template {
 fn home_redirect() -> Redirect {
     Redirect::to("/sign_in")
 }
+
+#[get("/main-test")]
+fn main_test() -> Template {
+    let map = hashmap!{
+        "dummy-key" => "dummy-value",
+    };
+    Template::render("main", map)
+}

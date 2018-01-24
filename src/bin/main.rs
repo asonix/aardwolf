@@ -61,6 +61,7 @@ fn app(config: config::Config) -> Rocket {
 
             aardwolf::routes::app::home,
             aardwolf::routes::app::home_redirect,
+            aardwolf::routes::app::main_test,
         ])
         .attach(Template::fairing())
         .manage(SystemRandom::new());
