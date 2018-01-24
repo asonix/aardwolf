@@ -1,0 +1,47 @@
+{{!-- layouts/base.html.hbs --}}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <title>
+      {{#if title}}
+        {{title}}
+      {{else}}
+        Temp
+      {{/if}}
+    </title>
+  </head>
+  <body>
+    <header>
+      {{#> header-block}}
+      {{/header-block}}
+      <!-- End Page Header -->
+    </header>
+    <section>
+      {{#> content-block}}
+      {{/content-block}}
+    </section>
+    <footer>
+      <!-- Begin Page Footer -->
+      {{#> footer-block}}
+        <footer class="footer">
+          <div class="container">
+            <div class="content has-text-centered">
+              <a href="termsofservice.html" class="footerBox">{{ terms }}</a>
+              <span class="verticalLine"/>
+              <span class="footerBox">{{ copyright }}</span>
+              <span class="verticalLine" />
+              <a href="https://github.com/BanjoFox/aardwolf" class="footerBox"> {{ github }}<i class="fa fa-lg fa-github"></i>!</a>
+              <span class="verticalLine" />
+              <a href="https://www.patreon.com/banjofox" class="footerBox">{{ donate }}<span class="fa fa-beer"aria-hidden="true"></span></a>		
+            </div>
+          </div>
+        </footer>
+      {{/footer-block}}
+    </footer>
+  </body>
+</html>
